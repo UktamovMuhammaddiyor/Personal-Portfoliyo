@@ -1,0 +1,85 @@
+@media screen and (max-width: 576px) {
+  .home h2 {
+    font-size: 30px !important;
+  }
+}
+@media screen and (max-width: 996px) {
+  .container {
+    max-width: 960px;
+  }
+  .home h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* home section */
+  .container {
+    max-width: 720px;
+  }
+  .header-section .fullscreen {
+    flex-direction: column-reverse;
+  }
+  .home {
+    max-width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .home .home-img {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  /* about section */
+  .about-img,
+  .about-text,
+  .services,
+  .contact-item,
+  .portfoliyo,
+  .input-group,
+  .skill {
+    flex: 0 0 100%;
+  }
+  .about-text {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .time-lines {
+    margin-left: 25px;
+  }
+  .time-line {
+    padding: 15px 0;
+  }
+  .time-lines::before {
+    left: 0;
+  }
+  .time-line:nth-child(odd) {
+    padding-right: 0;
+    padding-left: 50px;
+    text-align: left;
+  }
+  .time-line:nth-child(even) {
+    padding-left: 50px;
+  }
+  .time-line:nth-child(odd) h1 i {
+    right: none;
+    left: -100px;
+  }
+  .time-line:nth-child(odd) .timeline-item h1::before {
+    right: none;
+    left: -80px;
+  }
+  .service-section .justify-content-between,
+  .justify-content-center {
+    justify-content: center;
+  }
+  .portfoliyo:nth-child(even) {
+    margin: 0 0 30px;
+  }
+  .testiminals {
+    width: 100% !important;
+  }
+  .contact-item {
+    margin: 15px 0;
+  }
+}
