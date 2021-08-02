@@ -24,35 +24,75 @@
       crossorigin="anonymous"
     />
   </head>
-  <body onload="change_color()">
+  <body>
+    <!-- setting section start -->
+    <div class="settings row">
+      <div class="setting row">
+        <div class="set-icon outer-shadow hover-in-shadow">
+          <i class="fas fa-cog"></i>
+        </div>
+        <div
+          class="set-icon outer-shadow hover-in-shadow"
+          onclick="change_bg()"
+        >
+          <i class="fas fa-moon"></i>
+        </div>
+      </div>
+      <div class="col-set row outer-shadow">
+        <h3>Theme Colors</h3>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+
     <!-- Navbar section -->
 
     <nav>
       <div class="container">
         <div class="row justify-content-between">
           <div class="logo text-change">MD</div>
-          <button class="btn-nav cursor-pointer outer-shadow hover-in-shadow">
+          <button
+            class="btn-nav cursor-pointer outer-shadow hover-in-shadow"
+            onclick="open_close()"
+          >
             <i class="fas fa-bars"></i>
           </button>
         </div>
       </div>
     </nav>
     <nav class="nav-bar row">
-      <button class="btn-nav cursor-pointer outer-shadow hover-in-shadow">
+      <button
+        class="btn-nav cursor-pointer outer-shadow hover-in-shadow"
+        onclick="close_open()"
+      >
         <i class="fas fa-times"></i>
       </button>
       <ul class="row">
-        <li><a href="#" class="btn-1 outer-shadow text-change inner-shadow">Home</a></li>
-        <li><a href="#" class="btn-1 outer-shadow hover-in-shadow">About</a></li>
-        <li><a href="#" class="btn-1 outer-shadow hover-in-shadow">Services</a></li>
-        <li><a href="#" class="btn-1 outer-shadow hover-in-shadow">Portfoliyo</a></li>
-        <li><a href="#" class="btn-1 outer-shadow hover-in-shadow">Testimonial</a></li>
-        <li><a href="#" class="btn-1 outer-shadow hover-in-shadow">Contact</a></li>
-
+        <li>
+          <a href="#" class="btn-1 outer-shadow text-change inner-shadow"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#" class="btn-1 outer-shadow hover-in-shadow">About</a>
+        </li>
+        <li>
+          <a href="#" class="btn-1 outer-shadow hover-in-shadow">Services</a>
+        </li>
+        <li>
+          <a href="#" class="btn-1 outer-shadow hover-in-shadow">Portfoliyo</a>
+        </li>
+        <li>
+          <a href="#" class="btn-1 outer-shadow hover-in-shadow">Testimonial</a>
+        </li>
+        <li>
+          <a href="#" class="btn-1 outer-shadow hover-in-shadow">Contact</a>
+        </li>
       </ul>
-      <footer>
-        &copy 2021 The Muhammaddiyor
-      </footer>
+      <footer>&copy 2021 The Muhammaddiyor</footer>
     </nav>
 
     <!-- Navbar section end -->
@@ -363,6 +403,28 @@
         </div>
       </div>
     </section>
+    <!-- view portfolios  -->
+    <div class="portfolio-view">
+      <div class="container port-view">
+        <div class="row">
+          <h2>Personal Portfoliyo</h2>
+          <p><b>Category: - </b>Web Application</p>
+          <hr />
+          <div class="row">
+            <div class="brief">
+              <h2>Project brief</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                enim eligendi, aperiam odit minus at laudantium id vero placeat?
+                Aliquid maxime autem perspiciatis inventore, a quisquam
+                doloremque libero molestiae laboriosam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
 
     <!-- Portfoliyo section end -->
 
@@ -449,6 +511,7 @@
             >
               <div class="input-group">
                 <input
+                  required
                   placeholder="Name"
                   type="text"
                   name="name"
@@ -456,6 +519,7 @@
                   class="outer-shadow"
                 />
                 <input
+                  required
                   placeholder="Email"
                   type="text"
                   name="email"
@@ -463,6 +527,7 @@
                   class="outer-shadow"
                 />
                 <input
+                  required
                   placeholder="Subject"
                   type="text"
                   name="sub"

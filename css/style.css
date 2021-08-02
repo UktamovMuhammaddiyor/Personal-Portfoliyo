@@ -9,11 +9,9 @@
   --color-4: #2eb1ed;
   --color-5: #cc3a3b;
   --bgcolor-light: rgb(239, 240, 244);
-  --bgcolor-dark: rgb(43, 44, 47);
   --text-color-light: rgb(100, 100, 100);
   --text-color-400: rgb(148, 148, 148);
   --text-color-700: rgb(0, 0, 0);
-  --text-color-dark: rgb(187, 187, 187);
   --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
   --outer-0-shadow: 0px 0px 0px #d0d0d0, 0px 0px 0px #f8f8f8;
@@ -24,9 +22,9 @@ body {
   line-height: 1.5;
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
-  /* background-color: var(--bgcolor-dark); */
   background-color: var(--bgcolor-light);
   color: var(--text-color-light);
+  transition: all 0.3s ease-in-out;
 }
 * {
   margin: 0;
@@ -126,6 +124,61 @@ a {
   border-radius: 30px;
 }
 
+/* setting section styles */
+.settings {
+  position: fixed;
+  top: 100px;
+  right: -242px;
+  width: 310px;
+}
+.setting {
+  flex: 0 0 22.5%;
+  justify-content: center;
+  align-items: baseline;
+}
+.col-set {
+  flex: 0 0 77.5%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--bgcolor-light);
+}
+.set-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.3em;
+  text-align: center;
+  line-height: 40px;
+  background-color: var(--bgcolor-light);
+  cursor: pointer;
+}
+.set-icon:nth-child(1) {
+  margin-bottom: 15px;
+}
+.col-set h3 {
+  flex: 0 0 100%;
+}
+.col-1 {
+  width: 40px;
+  height: 40px;
+  margin: 10px 2px;
+  border-radius: 50%;
+  background-color: #fb839e;
+  cursor: pointer;
+}
+.col-1:nth-child(2) {
+  background-color: var(--color-2);
+}
+.col-1:nth-child(3) {
+  background-color: var(--color-3);
+}
+.col-1:nth-child(4) {
+  background-color: var(--color-4);
+}
+.col-1:nth-child(5) {
+  background-color: var(--color-5);
+}
+
 /* navbar */
 nav {
   width: 100%;
@@ -165,6 +218,9 @@ nav {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
 }
 .nav-bar ul {
   list-style-type: none;
@@ -578,4 +634,7 @@ textarea {
   cursor: pointer;
   font-weight: 400;
   padding: 16px 26px;
+}
+.portfolio-view {
+  display: none;
 }
