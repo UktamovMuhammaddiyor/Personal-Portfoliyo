@@ -16,19 +16,15 @@
   .container {
     max-width: 720px;
   }
-  .header-section .fullscreen {
-    flex-direction: column-reverse;
-  }
   .home {
     max-width: 100%;
     flex: 0 0 100%;
     text-align: center;
     justify-content: center;
   }
-
   .home .home-img {
-    width: 80%;
-    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 10px;
   }
   /* about section */
   .about-img,
