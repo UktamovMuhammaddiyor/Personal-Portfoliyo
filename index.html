@@ -28,23 +28,29 @@
     <!-- setting section start -->
     <div class="settings row">
       <div class="setting row">
-        <div class="set-icon outer-shadow hover-in-shadow">
+        <div
+          class="set-icon outer-shadow hover-in-shadow"
+          onclick="open_setting()"
+        >
           <i class="fas fa-cog"></i>
         </div>
         <div
           class="set-icon outer-shadow hover-in-shadow"
           onclick="change_bg()"
         >
-          <i class="fas fa-moon"></i>
+          <div class="ic-s">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+          </div>
         </div>
       </div>
       <div class="col-set row outer-shadow">
         <h3>Theme Colors</h3>
-        <div class="col-1"></div>
-        <div class="col-1"></div>
-        <div class="col-1"></div>
-        <div class="col-1"></div>
-        <div class="col-1"></div>
+        <div class="col-1" onclick="change_color(1)"></div>
+        <div class="col-1" onclick="change_color(2)"></div>
+        <div class="col-1" onclick="change_color(3)"></div>
+        <div class="col-1" onclick="change_color(4)"></div>
+        <div class="col-1" onclick="change_color(5)"></div>
       </div>
     </div>
 
@@ -66,30 +72,58 @@
     <nav class="nav-bar row">
       <button
         class="btn-nav cursor-pointer outer-shadow hover-in-shadow"
-        onclick="close_open()"
+        onclick="close_open(2)"
       >
         <i class="fas fa-times"></i>
       </button>
       <ul class="row">
         <li>
-          <a href="#" class="btn-1 outer-shadow text-change inner-shadow"
+          <a
+            href="index.html"
+            class="btn-1 outer-shadow text-change inner-shadow"
+            onclick="close_open(this)"
             >Home</a
           >
         </li>
         <li>
-          <a href="#" class="btn-1 outer-shadow hover-in-shadow">About</a>
+          <a
+            href="#about-section"
+            class="btn-1 outer-shadow hover-in-shadow"
+            onclick="close_open(this)"
+            >About</a
+          >
         </li>
         <li>
-          <a href="#" class="btn-1 outer-shadow hover-in-shadow">Services</a>
+          <a
+            href="#service"
+            class="btn-1 outer-shadow hover-in-shadow"
+            onclick="close_open(this)"
+            >Services</a
+          >
         </li>
         <li>
-          <a href="#" class="btn-1 outer-shadow hover-in-shadow">Portfoliyo</a>
+          <a
+            href="#portfoliyo"
+            class="btn-1 outer-shadow hover-in-shadow"
+            onclick="close_open(this)"
+            >Portfoliyo</a
+          >
         </li>
         <li>
-          <a href="#" class="btn-1 outer-shadow hover-in-shadow">Testimonial</a>
+          <a
+            href="#testiminal"
+            class="btn-1 outer-shadow hover-in-shadow"
+            onclick="close_open(this)"
+            >Testimonial</a
+          >
         </li>
         <li>
-          <a href="#" class="btn-1 outer-shadow hover-in-shadow">Contact</a>
+          <a
+            href="#contact"
+            class="btn-1 outer-shadow hover-in-shadow"
+            onclick="close_open(this)"
+            >Contact</a
+          >
         </li>
       </ul>
       <footer>&copy 2021 The Muhammaddiyor</footer>
@@ -430,7 +464,7 @@
 
     <!-- testeminial section start -->
 
-    <section class="testiminal-section">
+    <section class="testiminal-section" id="testiminal">
       <div class="container">
         <div class="row">
           <main class="main">
@@ -470,7 +504,7 @@
 
     <!-- contact section start -->
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="container">
         <div class="row fullscreen">
           <main class="main">

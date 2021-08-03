@@ -12,6 +12,7 @@
   --text-color-light: rgb(100, 100, 100);
   --text-color-400: rgb(148, 148, 148);
   --text-color-700: rgb(0, 0, 0);
+  --text-color-dark: rgb(187, 187, 187);
   --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
   --outer-0-shadow: 0px 0px 0px #d0d0d0, 0px 0px 0px #f8f8f8;
@@ -53,6 +54,7 @@ a {
 }
 .text-change {
   color: var(--color) !important;
+  transition: all 0.3s ease-in-out;
 }
 .border-change {
   border-color: var(--color);
@@ -130,6 +132,8 @@ a {
   top: 100px;
   right: -242px;
   width: 310px;
+  z-index: 98;
+  transition: right 0.5s ease-in-out;
 }
 .setting {
   flex: 0 0 22.5%;
@@ -141,6 +145,7 @@ a {
   padding: 10px;
   border-radius: 8px;
   background-color: var(--bgcolor-light);
+  transition: all 0.3s ease-in-out;
 }
 .set-icon {
   width: 40px;
@@ -151,6 +156,7 @@ a {
   line-height: 40px;
   background-color: var(--bgcolor-light);
   cursor: pointer;
+  overflow-y: hidden;
 }
 .set-icon:nth-child(1) {
   margin-bottom: 15px;
@@ -177,6 +183,9 @@ a {
 }
 .col-1:nth-child(5) {
   background-color: var(--color-5);
+}
+.ic-s {
+  transition: transform 0.3s ease-in-out;
 }
 
 /* navbar */
