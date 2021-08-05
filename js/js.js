@@ -29,6 +29,86 @@ function close_open(b, raq) {
   open_item.style.opacity = '0'
   open_item.style.zIndex = '-1'
 }
+//about me
+function about_me() {
+  document.getElementsByClassName('inner-shadow')[0].classList =
+    'btn-1 outer-shadow hover-in-shadow'
+  document.getElementById('aboutme').classList =
+    'btn-1 inner-shadow text-change'
+
+  var item2 = document.getElementsByClassName('sec-' + nom)[0]
+  item2.style.zIndex = '-1'
+  item2.style.opacity = 0
+  item2.style.display = 'none'
+  nom = 1
+  var item = document.getElementsByClassName('sec-' + nom)[0]
+  item.style.display = 'block'
+  setTimeout(function () {
+    item.style.zIndex = '1'
+    item.style.opacity = 1
+  }, 100)
+}
+// change skills, education, experience
+function skills(a, son) {
+  var sk = document.getElementsByClassName('skill-close')[0],
+    ti = document.getElementsByClassName('time-lines')[0],
+    skch = document.getElementsByClassName('skill-ch')[0],
+    ti2 = document.getElementsByClassName('time-lines')[1]
+
+  if (son === 0) {
+    if (ti.style.display === 'block') {
+      ti.style.opacity = 0
+      ti.style.zIndex = '-1'
+      ti.style.display = 'none'
+    } else {
+      ti2.style.opacity = 0
+      ti2.style.zIndex = '-1'
+      ti2.style.display = 'none'
+    }
+    sk.style.display = 'flex'
+    setTimeout(function () {
+      sk.style.opacity = 1
+      sk.style.zIndex = '1'
+      sk.style.top = '50px'
+    }, 100)
+  } else if (son === 1) {
+    if (ti2.style.display === 'block') {
+      ti2.style.opacity = 0
+      ti2.style.zIndex = '-1'
+      ti2.style.display = 'none'
+    } else {
+      sk.style.top = 0
+      sk.style.opacity = 0
+      sk.style.zIndex = '-1'
+      sk.style.display = 'none'
+    }
+    ti.style.display = 'block'
+    setTimeout(function () {
+      ti.style.opacity = 1
+      ti.style.zIndex = '1'
+      ti.style.top = '50px'
+    }, 100)
+  } else {
+    if (ti.style.display === 'block') {
+      ti.style.opacity = 0
+      ti.style.zIndex = '-1'
+      ti.style.display = 'none'
+    } else {
+      sk.style.top = 0
+      sk.style.opacity = 0
+      sk.style.zIndex = '-1'
+      sk.style.display = 'none'
+    }
+    ti2.style.display = 'block'
+    setTimeout(function () {
+      ti2.style.opacity = 1
+      ti2.style.zIndex = '1'
+      ti2.style.top = '50px'
+    }, 100)
+  }
+  skch.classList = 'btn-1 inner-shadow-h'
+  a.classList = 'btn-1 outer-shadow text-change skill-ch'
+}
 // change bg color with change :root bgcolor
 function change_bg() {
   var vc = document.createElement('style')

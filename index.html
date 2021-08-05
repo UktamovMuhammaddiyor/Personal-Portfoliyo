@@ -142,6 +142,7 @@
             href="#about-section"
             class="btn-1 outer-shadow hover-in-shadow"
             onclick="close_open(this, 1)"
+            id="aboutme"
             >About</a
           >
         </li>
@@ -195,6 +196,7 @@
             <a
               href="#about-section"
               class="btn-1 text-change outer-shadow hover-in-shadow"
+              onclick="about_me()"
               >More about me</a
             >
           </div>
@@ -266,11 +268,20 @@
             </div>
             <div class="skils">
               <div class="menu row">
-                <a href="#" class="btn-1 outer-shadow text-change">Skills</a>
-                <a href="#" class="btn-1 inner-shadow-h">Experience</a>
-                <a href="#" class="btn-1 inner-shadow-h">Education</a>
+                <button
+                  class="btn-1 outer-shadow text-change skill-ch"
+                  onclick="skills(this, 0)"
+                >
+                  Skills
+                </button>
+                <button class="btn-1 inner-shadow-h" onclick="skills(this, 1)">
+                  Experience
+                </button>
+                <button class="btn-1 inner-shadow-h" onclick="skills(this, 2)">
+                  Education
+                </button>
               </div>
-              <div class="row">
+              <div class="row skill-close">
                 <div class="skill">
                   <h4>Html</h4>
                   <div class="skill-prog inner-shadow">
@@ -311,6 +322,53 @@
                   <div class="skill-prog inner-shadow">
                     <div class="skill-text">60%</div>
                     <div class="skill-in-prog outer-shadow"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row time-lines">
+                <div class="time-line">
+                  <div class="timeline-item outer-shadow">
+                    <h1 class="text-change">
+                      <i class="fas fa-briefcase icon"></i>Sep,2020 - April,
+                      2021
+                    </h1>
+                    <h2>Web Front-end Developer</h2>
+                    <p><i>Campany Name, Uzbekitan</i></p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Sit, praesentium, impedit iure delectus totam earum
+                      maiores, nam cupiditate tenetur.
+                    </p>
+                  </div>
+                </div>
+                <div class="time-line">
+                  <div class="timeline-item outer-shadow">
+                    <h1 class="text-change">
+                      <i class="fas fa-briefcase icon"></i>Sep,2020 - April,
+                      2021
+                    </h1>
+                    <h2>Web Front-end Developer</h2>
+                    <p><i>Campany Name, Uzbekitan</i></p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Sit, praesentium, impedit iure delectus totam earum
+                      maiores, nam cupiditate tenetur.
+                    </p>
+                  </div>
+                </div>
+                <div class="time-line">
+                  <div class="timeline-item outer-shadow">
+                    <h1 class="text-change">
+                      <i class="fas fa-briefcase icon"></i>Sep,2020 - April,
+                      2021
+                    </h1>
+                    <h2>Web Front-end Developer</h2>
+                    <p><i>Campany Name, Uzbekitan</i></p>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Sit, praesentium, impedit iure delectus totam earum
+                      maiores, nam cupiditate tenetur.
+                    </p>
                   </div>
                 </div>
               </div>

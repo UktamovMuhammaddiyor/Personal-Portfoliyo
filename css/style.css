@@ -376,15 +376,26 @@ article {
   width: 100%;
   padding: 0 15px;
   margin-top: 50px;
+  position: relative;
 }
 .menu {
   width: 100%;
   justify-content: center;
 }
-.menu a {
+.menu button {
   margin: 0 10px;
   color: var(--text-color-700);
   transition: all 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+.skill-close {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 50px;
 }
 .skill {
   flex: 0 0 50%;
@@ -433,7 +444,14 @@ article {
 }
 .time-lines {
   margin: 50px 0;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 50px solid var(--bgcolor-light);
 }
 .time-lines::before {
   content: '';
@@ -631,6 +649,9 @@ article {
 }
 #plus {
   display: none;
+}
+.sec-1 {
+  transition: all 0.3s ease-in-out;
 }
 
 /* testimal section styles */
