@@ -25,6 +25,58 @@
     />
   </head>
   <body>
+    <div class="portfolio-view">
+      <div class="container port-view">
+        <div class="port-mar">
+          <h2>Personal Portfoliyo</h2>
+          <p style="padding: 10px 0"><b>Category: - </b>Web Application</p>
+          <hr />
+          <div class="row r-info">
+            <div class="brief">
+              <h2>Project brief</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                enim eligendi, aperiam odit minus at laudantium id vero placeat?
+                Aliquid maxime autem perspiciatis inventore, a quisquam
+                doloremque libero molestiae laboriosam.
+              </p>
+            </div>
+            <div class="p-info">
+              <h2>Project Info</h2>
+              <p><b>Data:</b> 2021</p>
+              <p><b>Data:</b> 2021</p>
+              <p><b>Data:</b> 2021</p>
+              <p><b>Data:</b> 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="container p-view">
+        <div class="row">
+          <div class="p-det row justify-content-between">
+            <button
+              class="btn-1 text-change outer-shadow hover-in-shadow"
+              onclick="project_click()"
+            >
+              Project Details <i id="minus" class="fas fa-minus"></i
+              ><i id="plus" class="fas fa-plus"></i>
+            </button>
+            <button
+              class="btn-2 outer-shadow hover-in-shadow"
+              onclick="close_view()"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-img outer-shadow">
+            <img src="./images/1.png" alt="error" />
+          </div>
+        </div>
+      </div>
+      <i class="fas fa-caret-right p-icon"></i>
+      <i class="fas fa-caret-left p-icon"></i>
+    </div>
     <!-- setting section start -->
     <div class="settings row">
       <div class="setting row">
@@ -72,16 +124,16 @@
     <nav class="nav-bar row">
       <button
         class="btn-nav cursor-pointer outer-shadow hover-in-shadow"
-        onclick="close_open(2)"
+        onclick="close_open(2, 0)"
       >
         <i class="fas fa-times"></i>
       </button>
       <ul class="row">
         <li>
           <a
-            href="index.html"
+            href="#"
             class="btn-1 outer-shadow text-change inner-shadow"
-            onclick="close_open(this)"
+            onclick="close_open(this, 0)"
             >Home</a
           >
         </li>
@@ -89,7 +141,7 @@
           <a
             href="#about-section"
             class="btn-1 outer-shadow hover-in-shadow"
-            onclick="close_open(this)"
+            onclick="close_open(this, 1)"
             >About</a
           >
         </li>
@@ -97,7 +149,7 @@
           <a
             href="#service"
             class="btn-1 outer-shadow hover-in-shadow"
-            onclick="close_open(this)"
+            onclick="close_open(this, 2)"
             >Services</a
           >
         </li>
@@ -105,7 +157,7 @@
           <a
             href="#portfoliyo"
             class="btn-1 outer-shadow hover-in-shadow"
-            onclick="close_open(this)"
+            onclick="close_open(this, 3)"
             >Portfoliyo</a
           >
         </li>
@@ -113,7 +165,7 @@
           <a
             href="#testiminal"
             class="btn-1 outer-shadow hover-in-shadow"
-            onclick="close_open(this)"
+            onclick="close_open(this, 4)"
             >Testimonial</a
           >
         </li>
@@ -121,7 +173,7 @@
           <a
             href="#contact"
             class="btn-1 outer-shadow hover-in-shadow"
-            onclick="close_open(this)"
+            onclick="close_open(this, 5)"
             >Contact</a
           >
         </li>
@@ -133,7 +185,7 @@
 
     <!-- home section start -->
 
-    <section class="header-section">
+    <section class="header-section sec sec-0">
       <div class="container">
         <div class="row fullscreen align-items-center">
           <div class="home">
@@ -163,7 +215,7 @@
 
     <!-- about section start -->
 
-    <section class="about-section" id="about-section">
+    <section class="about-section sec sec-1" id="about-section">
       <div class="container">
         <div class="row fullscreen">
           <main class="main">
@@ -319,7 +371,7 @@
 
     <!-- Services section start -->
 
-    <section class="service-section" id="service">
+    <section class="service-section sec sec-2" id="service">
       <div class="container">
         <div class="row fullscreen">
           <main class="main">
@@ -390,7 +442,7 @@
 
     <!-- Portfoliyo section start -->
 
-    <section class="portfoliyo-section" id="portfoliyo">
+    <section class="portfoliyo-section sec sec-3" id="portfoliyo">
       <div class="container">
         <div class="row fullscreen">
           <main class="main">
@@ -406,7 +458,7 @@
           </div>
           <div class="row" style="margin: 50px 0">
             <div class="row justify-content-center">
-              <div class="portfoliyo outer-shadow">
+              <div class="portfoliyo outer-shadow" onclick="open_view()">
                 <img src="./images/profile-pic.png" alt="error" />
                 <h3>Personal Portfoliyo</h3>
               </div>
@@ -438,33 +490,12 @@
       </div>
     </section>
     <!-- view portfolios  -->
-    <div class="portfolio-view">
-      <div class="container port-view">
-        <div class="row">
-          <h2>Personal Portfoliyo</h2>
-          <p><b>Category: - </b>Web Application</p>
-          <hr />
-          <div class="row">
-            <div class="brief">
-              <h2>Project brief</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                enim eligendi, aperiam odit minus at laudantium id vero placeat?
-                Aliquid maxime autem perspiciatis inventore, a quisquam
-                doloremque libero molestiae laboriosam.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr />
-    </div>
 
     <!-- Portfoliyo section end -->
 
     <!-- testeminial section start -->
 
-    <section class="testiminal-section" id="testiminal">
+    <section class="testiminal-section sec sec-4" id="testiminal">
       <div class="container">
         <div class="row">
           <main class="main">
@@ -504,7 +535,7 @@
 
     <!-- contact section start -->
 
-    <section class="contact-section" id="contact">
+    <section class="contact-section sec sec-5" id="contact">
       <div class="container">
         <div class="row fullscreen">
           <main class="main">

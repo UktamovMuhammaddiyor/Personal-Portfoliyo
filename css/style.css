@@ -27,6 +27,20 @@ body {
   color: var(--text-color-light);
   transition: all 0.3s ease-in-out;
 }
+.sec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  display: none;
+}
+.sec-0 {
+  z-index: 1;
+  opacity: 1;
+  display: block;
+}
 * {
   margin: 0;
   padding: 0;
@@ -542,6 +556,82 @@ article {
   width: 100%;
   border-radius: 10px;
 }
+/* portfolio view */
+.portfolio-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--bgcolor-light);
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+.r-info {
+  padding: 30px 0;
+}
+.brief {
+  flex: 0 0 70%;
+}
+.brief p {
+  padding: 10px 0;
+}
+.p-info {
+  flex: 0 0 30%;
+  padding: 0 10px;
+}
+.p-info h2 {
+  padding-bottom: 10px;
+}
+.p-info p {
+  line-height: 1.8;
+}
+.port-view {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.port-mar {
+  margin-top: 50px;
+}
+.p-view {
+  padding: 50px 0;
+}
+.p-det,
+.p-img {
+  flex: 0 0 100%;
+}
+.p-det a {
+  color: var(--text-color-400);
+}
+.p-img {
+  margin-top: 20px;
+  padding: 10px;
+}
+.p-img img {
+  width: 100%;
+}
+.p-det button {
+  border: none;
+  cursor: pointer;
+}
+.p-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 2em;
+  cursor: pointer;
+}
+.p-icon:nth-child(odd) {
+  left: 10px;
+}
+.p-icon:nth-child(even) {
+  right: 10px;
+}
+#plus {
+  display: none;
+}
 
 /* testimal section styles */
 .testiminal-section {
@@ -643,7 +733,4 @@ textarea {
   cursor: pointer;
   font-weight: 400;
   padding: 16px 26px;
-}
-.portfolio-view {
-  display: none;
 }

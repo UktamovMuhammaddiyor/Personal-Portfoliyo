@@ -1,21 +1,31 @@
-// function change_color() {
-//   document.styleSheets[1].insertRule(':root { --color-1: #ec9412 !important; }')
-// }
 const open_item = document.getElementsByClassName('nav-bar')[0]
 var a = 0,
-  setting = 0
+  setting = 0,
+  p_click = 0,
+  hei = 0,
+  nom = 0
 // open and close buttons clicked
 function open_close() {
+  var item = document.getElementsByClassName('sec-' + nom)[0]
+  item.style.zIndex = '-1'
+  item.style.opacity = 0
+  item.style.display = 'none'
   open_item.style.opacity = '1'
   open_item.style.zIndex = '99'
 }
-function close_open(b) {
+function close_open(b, raq) {
   if (b !== 2) {
     //change nav link
     document.getElementsByClassName('inner-shadow')[0].classList =
       'btn-1 outer-shadow hover-in-shadow'
     b.classList = 'btn-1 inner-shadow text-change'
+    nom = raq
   }
+
+  var item = document.getElementsByClassName('sec-' + nom)[0]
+  item.style.zIndex = '1'
+  item.style.opacity = 1
+  item.style.display = 'block'
   open_item.style.opacity = '0'
   open_item.style.zIndex = '-1'
 }
@@ -66,4 +76,47 @@ function change_color(a) {
     case 5:
       vc.sheet.insertRule(':root{ --color: #fb839e; }', 0)
   }
+}
+// project section open close in portfolio
+function project_click() {
+  var item = document.getElementsByClassName('port-view')[0],
+    mi = document.getElementById('minus'),
+    pl = document.getElementById('plus')
+  if (p_click === 0) {
+    hei = item.clientHeight
+    item.style.height = 0
+    mi.style.display = 'none'
+    pl.style.display = 'inline'
+    p_click = 1
+  } else {
+    mi.style.display = 'inline'
+    pl.style.display = 'none'
+    item.style.height = hei + 'px'
+    p_click = 0
+  }
+}
+// open portfolio view
+function open_view() {
+  var item1 = document.getElementsByClassName('sec-' + nom)[0],
+    item2 = document.getElementsByClassName('portfolio-view')[0]
+  item1.style.zIndex = '-1'
+  item1.style.opacity = 0
+  item1.style.display = 'none'
+  item2.style.opacity = '1'
+  item2.style.zIndex = '100'
+  item2.style.display = 'block'
+  if (document.getElementsByClassName('port-view')[0].style.height !== '0px') {
+    project_click()
+  }
+}
+// close portfolio view
+function close_view() {
+  var item1 = document.getElementsByClassName('sec-' + nom)[0],
+    item2 = document.getElementsByClassName('portfolio-view')[0]
+  item1.style.zIndex = '1'
+  item1.style.opacity = 1
+  item1.style.display = 'block'
+  item2.style.opacity = '0'
+  item2.style.zIndex = '-1'
+  item2.style.display = 'none'
 }
