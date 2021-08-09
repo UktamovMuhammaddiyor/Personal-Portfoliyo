@@ -25,58 +25,6 @@
     />
   </head>
   <body>
-    <div class="portfolio-view">
-      <div class="container port-view">
-        <div class="port-mar">
-          <h2>Personal Portfoliyo</h2>
-          <p style="padding: 10px 0"><b>Category: - </b>Web Application</p>
-          <hr />
-          <div class="row r-info">
-            <div class="brief">
-              <h2>Project brief</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                enim eligendi, aperiam odit minus at laudantium id vero placeat?
-                Aliquid maxime autem perspiciatis inventore, a quisquam
-                doloremque libero molestiae laboriosam.
-              </p>
-            </div>
-            <div class="p-info">
-              <h2>Project Info</h2>
-              <p><b>Data:</b> 2021</p>
-              <p><b>Data:</b> 2021</p>
-              <p><b>Data:</b> 2021</p>
-              <p><b>Data:</b> 2021</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <div class="container p-view">
-        <div class="row">
-          <div class="p-det row justify-content-between">
-            <button
-              class="btn-1 text-change outer-shadow hover-in-shadow"
-              onclick="project_click()"
-            >
-              Project Details <i id="minus" class="fas fa-minus"></i
-              ><i id="plus" class="fas fa-plus"></i>
-            </button>
-            <button
-              class="btn-2 outer-shadow hover-in-shadow"
-              onclick="close_view()"
-            >
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-          <div class="p-img outer-shadow">
-            <img src="./images/1.png" alt="error" />
-          </div>
-        </div>
-      </div>
-      <i class="fas fa-caret-right p-icon"></i>
-      <i class="fas fa-caret-left p-icon"></i>
-    </div>
     <!-- setting section start -->
     <div class="settings row">
       <div class="setting row">
@@ -508,38 +456,24 @@
             <h2>Latest works</h2>
           </main>
           <div class="menu row">
-            <a href="#" class="btn-1 outer-shadow text-change">All</a>
-            <a href="#" class="btn-1 inner-shadow-h">Web Application</a>
-            <a href="#" class="btn-1 inner-shadow-h">Blog</a>
-            <a href="#" class="btn-1 inner-shadow-h">E-commarce</a>
-            <a href="#" class="btn-1 inner-shadow-h">Landing</a>
+            <button class="btn-1 outer-shadow text-change">All</button>
+            <button class="btn-1 inner-shadow-h">Web Application</button>
+            <button class="btn-1 inner-shadow-h">Blog</button>
+            <button class="btn-1 inner-shadow-h">E-commarce</button>
+            <button class="btn-1 inner-shadow-h">Landing</button>
           </div>
           <div class="row" style="margin: 50px 0">
             <div class="row justify-content-center">
-              <div class="portfoliyo outer-shadow" onclick="open_view()">
-                <img src="./images/profile-pic.png" alt="error" />
-                <h3>Personal Portfoliyo</h3>
+              <div class="portfoliyo outer-shadow" onclick="open_view(1)">
+                <img src="./images/projectview/1.png" alt="error" />
+                <h3>Landing Page</h3>
               </div>
-              <div class="portfoliyo outer-shadow">
-                <img src="./images/profile-pic.png" alt="error" />
-                <h3>Personal Portfoliyo</h3>
+              <div class="portfoliyo outer-shadow" onclick="open_view(2)">
+                <img src="./images/projectview/2.png" alt="error" />
+                <h3>Landing Page</h3>
               </div>
-              <div class="portfoliyo outer-shadow">
-                <img src="./images/profile-pic.png" alt="error" />
-                <h3>Personal Portfoliyo</h3>
-              </div>
-            </div>
-            <div class="row justify-content-center">
-              <div class="portfoliyo outer-shadow">
-                <img src="./images/profile-pic.png" alt="error" />
-                <h3>Personal Portfoliyo</h3>
-              </div>
-              <div class="portfoliyo outer-shadow">
-                <img src="./images/profile-pic.png" alt="error" />
-                <h3>Personal Portfoliyo</h3>
-              </div>
-              <div class="portfoliyo outer-shadow">
-                <img src="./images/profile-pic.png" alt="error" />
+              <div class="portfoliyo outer-shadow" onclick="open_view(3)">
+                <img src="./images/projectview/3.png" alt="error" />
                 <h3>Personal Portfoliyo</h3>
               </div>
             </div>
@@ -547,8 +481,69 @@
         </div>
       </div>
     </section>
+
     <!-- view portfolios  -->
 
+    <div class="portfolio-view">
+      <div class="container port-view">
+        <div class="port-mar">
+          <h2>Personal Portfoliyo</h2>
+          <p style="padding: 10px 0">
+            <b>Category: - </b><span id="portfolio-name">Web Application</span>
+          </p>
+          <hr />
+          <div class="row r-info">
+            <div class="brief">
+              <h2>Project brief</h2>
+              <p id="about-portfolio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                enim eligendi, aperiam odit minus at laudantium id vero placeat?
+                Aliquid maxime autem perspiciatis inventore, a quisquam
+                doloremque libero molestiae laboriosam.
+              </p>
+            </div>
+            <div class="p-info">
+              <h2>Project Info</h2>
+              <p><b>Data:</b> <span class="port-m"> 2021</span></p>
+              <p><b>Client:</b> <span class="port-m"> 2021</span></p>
+              <p><b>Tools:</b> <span class="port-m"> 2021</span></p>
+              <p><b>Web:</b> <span class="port-m"> 2021</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="container p-view">
+        <div class="row">
+          <div class="p-det row justify-content-between">
+            <button
+              class="btn-1 text-change outer-shadow hover-in-shadow"
+              onclick="project_click()"
+            >
+              Project Details <i id="minus" class="fas fa-minus"></i
+              ><i id="plus" class="fas fa-plus"></i>
+            </button>
+            <button
+              class="btn-2 outer-shadow hover-in-shadow"
+              onclick="close_view()"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-img outer-shadow">
+            <span id="portfoliyo-img">
+              <img
+                src="./images/project 1/1.png"
+                alt="error"
+                class="port-img"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+      <i class="fas fa-caret-right p-icon" onclick="next_port()"></i>
+      <i class="fas fa-caret-left p-icon" onclick="prev_port()"></i>
+    </div>
     <!-- Portfoliyo section end -->
 
     <!-- testeminial section start -->

@@ -176,9 +176,72 @@ function project_click() {
   }
 }
 // open portfolio view
-function open_view() {
+var port_dict = {
+  'project 1': {
+    name: 'Landing',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sedenim eligendi, aperiam odit minus at laudantium id vero placeat?Aliquid maxime autem perspiciatis inventore, a quisquamdoloremque libero molestiae laboriosam.',
+    malumot: [
+      2020,
+      'xyz',
+      'Html, Css, Js',
+      "<a href='https://mdrx.netlify.app'>MDRX</a",
+    ],
+    img: ['project 1/1.png'],
+  },
+  'project 2': {
+    name: 'Landing',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sedenim eligendi, aperiam odit minus at laudantium id vero placeat?Aliquid maxime autem perspiciatis inventore, a quisquamdoloremque libero molestiae laboriosam.',
+    malumot: [
+      2020,
+      'xyz',
+      'Html, Css, Js',
+      "<a href='https://goodwebsolution.netlify.app'>Goodweb</a",
+    ],
+    img: ['project 2/1.png'],
+  },
+  'project 3': {
+    name: 'Web Aplication',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sedenim eligendi, aperiam odit minus at laudantium id vero placeat?Aliquid maxime autem perspiciatis inventore, a quisquamdoloremque libero molestiae laboriosam.',
+    malumot: [
+      2020,
+      'xyz',
+      'Html, Css, Js',
+      "<a href='https://mdrx18.netlify.app'>MDRX18</a",
+    ],
+    img: [
+      'project 3/1.png',
+      'project 3/2.png',
+      'project 3/3.png',
+      'project 3/4.png',
+      'project 3/5.png',
+      'project 3/6.png',
+    ],
+  },
+}
+function open_view(a) {
   var item1 = document.getElementsByClassName('sec-' + nom)[0],
-    item2 = document.getElementsByClassName('portfolio-view')[0]
+    item2 = document.getElementsByClassName('portfolio-view')[0],
+    port_m = document.querySelectorAll('.port-m'),
+    port_img2 = document.getElementById('portfoliyo-img')
+  console.log(port_dict['project ' + a])
+  document.getElementById('portfolio-name').innerHTML =
+    port_dict['project ' + a].name
+  document.getElementById('about-portfolio').innerHTML =
+    port_dict['project ' + a].text
+  port_m.forEach((b, c) => {
+    b.innerHTML = port_dict['project ' + a].malumot[c]
+  })
+  port_img2.innerHTML =
+    '<img src="./images/' +
+    port_dict['project ' + a].img[0] +
+    '" alt="error" class="port-img"/>'
+  for (var i = 1; i < port_dict['project ' + a].img.length; i++) {
+    port_img2.innerHTML +=
+      '<img src="./images/' +
+      port_dict['project ' + a].img[i] +
+      '" alt="error" class="port-img"/>'
+  }
+  son_img = 0
   item1.style.zIndex = '-1'
   item1.style.opacity = 0
   item1.style.display = 'none'
@@ -188,6 +251,8 @@ function open_view() {
   if (document.getElementsByClassName('port-view')[0].style.height !== '0px') {
     project_click()
   }
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
 }
 // close portfolio view
 function close_view() {
@@ -199,4 +264,34 @@ function close_view() {
   item2.style.opacity = '0'
   item2.style.zIndex = '-1'
   item2.style.display = 'none'
+}
+// next portfolio view image
+var son_img = 0
+function next_port() {
+  var port_img = document.querySelectorAll('.port-img'),
+    next_img = 0
+  port_img.forEach((a, b) => {
+    a.style.display = 'none'
+    a.style.opacity = '0'
+  })
+  son_img += 1
+  if (son_img === port_img.length) {
+    son_img = 0
+  }
+  port_img[son_img].style.display = 'block'
+  port_img[son_img].style.animation = 'port_img 0.7s forwards'
+}
+function prev_port() {
+  var port_img = document.querySelectorAll('.port-img'),
+    next_img = 0
+  port_img.forEach((a, b) => {
+    a.style.display = 'none'
+    a.style.opacity = '0'
+  })
+  son_img -= 1
+  if (son_img === -1) {
+    son_img = port_img.length - 1
+  }
+  port_img[son_img].style.display = 'block'
+  port_img[son_img].style.animation = 'port_img 0.7s forwards'
 }
