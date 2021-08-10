@@ -322,9 +322,9 @@ document
     var xyz = event.clientX
     // var y = document.getElementsByClassName('testiminal')[0].client[Y]
     if (xy < xyz && xy !== 0) {
-      test_left()
-    } else {
       test_right()
+    } else {
+      test_left()
     }
     xy = xyz
   })
