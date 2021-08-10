@@ -324,12 +324,11 @@ document
   })
 document
   .getElementsByClassName('testiminal')[0]
-  .addEventListener('touchmove', function touch_move(event) {
+  .addEventListener('touchend', function touch_move(event) {
     var xyz = event.clientX
     if (xy < xyz) {
       test_right()
     } else {
       test_left()
     }
-    xy = xyz
   })
