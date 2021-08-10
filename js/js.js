@@ -316,11 +316,12 @@ function test_left() {
   test_prev[0].style.transform = 'translate(' + test + '%,0)'
 }
 var xy = 0,
-  y = 0
+  y = 0,
+  tend = 0
 document
   .getElementsByClassName('testiminal')[0]
   .addEventListener('touchstart', function touch_move(event) {
-    var xyz = event.screenX
+    var xyz = event.touches[0].clientX
     xy = xyz
     y = 0
   })
@@ -328,11 +329,13 @@ document
   .getElementsByClassName('testiminal')[0]
   .addEventListener('touchmove', function touch_move(event) {
     var test_prev = document.getElementsByClassName('testiminal')
-    var xyz = event.screenX
+    var xyz = event.touches[0].clientX
     if (xy < xyz) {
       y -= 1
+      tend = xyz - 1
     } else {
       y += 1
+      tend = xyz + 1
     }
     test_prev[0].style.transform = 'translate(' + y + '%,0)'
     xy = xyz
@@ -340,9 +343,7 @@ document
 document
   .getElementsByClassName('testiminal')[0]
   .addEventListener('touchend', function touch_move(event) {
-    // var test_prev = document.getElementsByClassName('testiminal')
-    var xyz = event.screenX
-    // test_prev[0].style.transform = 'translate(' + test + '%,0)'
+    var xyz = tend
     if (xy < xyz) {
       test_right()
     } else {
