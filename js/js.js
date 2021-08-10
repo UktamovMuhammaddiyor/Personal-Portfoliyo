@@ -315,12 +315,17 @@ function test_left() {
   }
   test_prev[0].style.transform = 'translate(' + test + '%,0)'
 }
-var xy = window.innerWidth / 33.33
+var xy = 0
+document
+  .getElementsByClassName('testiminal')[0]
+  .addEventListener('touchstart', function touch_move(event) {
+    var xyz = event.clientX
+    xy = xyz
+  })
 document
   .getElementsByClassName('testiminal')[0]
   .addEventListener('touchmove', function touch_move(event) {
     var xyz = event.clientX
-    // var y = document.getElementsByClassName('testiminal')[0].client[Y]
     if (xy < xyz) {
       test_right()
     } else {
