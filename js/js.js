@@ -295,3 +295,36 @@ function prev_port() {
   port_img[son_img].style.display = 'block'
   port_img[son_img].style.animation = 'port_img 0.7s forwards'
 }
+//testimanal prev view
+var test = 0
+function test_right() {
+  var test_prev = document.getElementsByClassName('testiminal'),
+    test2 = document.getElementsByClassName('testiminal-item')
+  test -= 100 / test2.length
+  if (test < -99) {
+    test = 0
+  }
+  test_prev[0].style.transform = 'translate(' + test + '%,0)'
+}
+function test_left() {
+  var test_prev = document.getElementsByClassName('testiminal'),
+    test2 = document.getElementsByClassName('testiminal-item')
+  test += 100 / test2.length
+  if (test > 1) {
+    test = -66.66
+  }
+  test_prev[0].style.transform = 'translate(' + test + '%,0)'
+}
+var xy = 0
+document
+  .getElementsByClassName('testiminal')[0]
+  .addEventListener('touchmove', function touch_move(event) {
+    var xyz = event.clientX
+    // var y = document.getElementsByClassName('testiminal')[0].client[Y]
+    if (xy < xyz && xy !== 0) {
+      test_left()
+    } else {
+      test_right()
+    }
+    xy = xyz
+  })
