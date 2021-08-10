@@ -315,17 +315,34 @@ function test_left() {
   }
   test_prev[0].style.transform = 'translate(' + test + '%,0)'
 }
-var xy = 0
+var xy = 0,
+  y = 0
 document
   .getElementsByClassName('testiminal')[0]
   .addEventListener('touchstart', function touch_move(event) {
-    var xyz = event.clientX
+    var xyz = event.screenX
+    xy = xyz
+    y = 0
+  })
+document
+  .getElementsByClassName('testiminal')[0]
+  .addEventListener('touchmove', function touch_move(event) {
+    var test_prev = document.getElementsByClassName('testiminal')
+    var xyz = event.screenX
+    if (xy < xyz) {
+      y -= 1
+    } else {
+      y += 1
+    }
+    test_prev[0].style.transform = 'translate(' + y + '%,0)'
     xy = xyz
   })
 document
   .getElementsByClassName('testiminal')[0]
   .addEventListener('touchend', function touch_move(event) {
-    var xyz = event.clientX
+    // var test_prev = document.getElementsByClassName('testiminal')
+    var xyz = event.screenX
+    // test_prev[0].style.transform = 'translate(' + test + '%,0)'
     if (xy < xyz) {
       test_right()
     } else {
