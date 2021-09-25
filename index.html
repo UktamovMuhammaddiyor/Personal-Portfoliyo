@@ -477,24 +477,60 @@
             <h2>Latest works</h2>
           </main>
           <div class="menu row">
-            <button class="btn-1 outer-shadow text-change">All</button>
-            <button class="btn-1 inner-shadow-h">Web Application</button>
-            <button class="btn-1 inner-shadow-h">Blog</button>
-            <button class="btn-1 inner-shadow-h">E-commarce</button>
-            <button class="btn-1 inner-shadow-h">Landing</button>
+            <button
+              class="btn-1 outer-shadow text-change portfoliyo-select"
+              onclick="portfolio(this,0)"
+            >
+              All
+            </button>
+            <button class="btn-1 inner-shadow-h" onclick="portfolio(this,1)">
+              Web Application
+            </button>
+            <button class="btn-1 inner-shadow-h" onclick="portfolio(this,2)">
+              Blog
+            </button>
+            <button class="btn-1 inner-shadow-h" onclick="portfolio(this,3)">
+              E-commarce
+            </button>
+            <button class="btn-1 inner-shadow-h" onclick="portfolio(this,4)">
+              Landing
+            </button>
           </div>
           <div class="row" style="margin: 50px 0">
             <div class="row justify-content-center">
-              <div class="portfoliyo outer-shadow" onclick="open_view(1)">
+              <div
+                class="portfoliyo outer-shadow landing hover-in-shadow"
+                onclick="open_view(1)"
+              >
                 <img src="./images/projectview/1.png" alt="error" />
                 <h3>Landing Page</h3>
               </div>
-              <div class="portfoliyo outer-shadow" onclick="open_view(2)">
+              <div
+                class="portfoliyo outer-shadow landing hover-in-shadow"
+                onclick="open_view(2)"
+              >
                 <img src="./images/projectview/2.png" alt="error" />
                 <h3>Landing Page</h3>
               </div>
-              <div class="portfoliyo outer-shadow" onclick="open_view(3)">
+              <div
+                class="portfoliyo outer-shadow webapp hover-in-shadow"
+                onclick="open_view(3)"
+              >
                 <img src="./images/projectview/3.png" alt="error" />
+                <h3>Personal Portfoliyo</h3>
+              </div>
+              <div
+                class="portfoliyo outer-shadow webapp hover-in-shadow"
+                onclick="open_view(4)"
+              >
+                <img src="./images/projectview/4.png" alt="error" />
+                <h3>Weather App</h3>
+              </div>
+              <div
+                class="portfoliyo outer-shadow webapp hover-in-shadow"
+                onclick="open_view(5)"
+              >
+                <img src="./images/projectview/5.png" alt="error" />
                 <h3>Personal Portfoliyo</h3>
               </div>
             </div>
@@ -621,7 +657,10 @@
                 >
                   <i class="fas fa-angle-left"></i>
                 </button>
-                <button onclick="test_right()" class="btn-2 text-change outer-shadow hover-in-shadow">
+                <button
+                  onclick="test_right()"
+                  class="btn-2 text-change outer-shadow hover-in-shadow"
+                >
                   <i class="fas fa-angle-right"></i>
                 </button>
               </div>

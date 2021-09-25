@@ -175,6 +175,47 @@ function project_click() {
     p_click = 0
   }
 }
+// portfoliyo change category
+function setport(b) {
+  setTimeout(function () {
+    b.style.opacity = '1'
+  }, 300)
+}
+function portfolio(ac, aaa) {
+  var portfolio1 = document.querySelectorAll('.portfoliyo'),
+    land = 0,
+    webapp = document.querySelectorAll('.portfoliyo-select')
+  webapp[0].classList = 'btn-1 inner-shadow-h'
+  ac.classList = 'btn-1 outer-shadow text-change portfoliyo-select'
+  portfolio1.forEach((b) => {
+    b.style.display = 'none'
+    b.style.opacity = '0'
+  })
+  if (aaa === 0) {
+    portfolio1.forEach((b) => {
+      b.style.display = 'block'
+      setport(b)
+    })
+  } else if (aaa === 1) {
+    portfolio1.forEach((b) => {
+      land = b.classList
+      if (land[2] === 'webapp') {
+        b.style.display = 'block'
+        setport(b)
+      }
+    })
+  } else if (aaa === 2) {
+  } else if (aaa === 3) {
+  } else if (aaa === 4) {
+    portfolio1.forEach((b) => {
+      land = b.classList
+      if (land[2] === 'landing') {
+        b.style.display = 'block'
+        setport(b)
+      }
+    })
+  }
+}
 // open portfolio view
 var port_dict = {
   'project 1': {
@@ -215,6 +256,33 @@ var port_dict = {
       'project 3/4.png',
       'project 3/5.png',
       'project 3/6.png',
+    ],
+  },
+  'project 4': {
+    name: 'Web Aplication',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sedenim eligendi, aperiam odit minus at laudantium id vero placeat?Aliquid maxime autem perspiciatis inventore, a quisquamdoloremque libero molestiae laboriosam.',
+    malumot: [
+      2021,
+      'xyz',
+      'Html, Css, Js',
+      "<a href='https://weatherapp-mdrx.netlify.app'>Weather App</a",
+    ],
+    img: ['project 4/1.png', 'project 4/2.png', 'project 4/3.png'],
+  },
+  'project 5': {
+    name: 'Web Aplication',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sedenim eligendi, aperiam odit minus at laudantium id vero placeat?Aliquid maxime autem perspiciatis inventore, a quisquamdoloremque libero molestiae laboriosam.',
+    malumot: [
+      2021,
+      'xyz',
+      'Html, Css, Js',
+      "<a href='https://muhammaddiyor.ga'>Muhammaddiyor</a",
+    ],
+    img: [
+      'project 5/1.png',
+      'project 5/2.png',
+      'project 5/3.png',
+      'project 5/4.png',
     ],
   },
 }
@@ -295,7 +363,7 @@ function prev_port() {
   port_img[son_img].style.display = 'block'
   port_img[son_img].style.animation = 'port_img 0.7s forwards'
 }
-//testimanal prev view
+//testimanal  view
 var test = 0
 function test_right() {
   var test_prev = document.getElementsByClassName('testiminal'),
